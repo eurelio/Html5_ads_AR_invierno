@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Campaña html5 invierno Aerolineas</title>
+  <title>Campaña HTML5 Invierno Aerolíneas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Estilos para posicionar las animaciones y darles un aspecto visual atractivo */
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
+      font-family: 'Poppins', Arial, sans-serif;
+      text-align: left;
+      background-color: #002169;
+      color: white;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
       display: flex;
-      flex-direction: column; /* Apilamos las animaciones verticalmente */
-      align-items: flex-start; /* Alineamos al inicio (izquierda) */
+      flex-direction: column;
+      align-items: flex-start;
       margin: 20px;
     }
 
     iframe {
-      border: none; /* Elimina el borde por defecto del iframe */
-      margin-bottom: 30px; /* Añade un margen inferior de 30px a cada iframe */
+      border: none;
+      margin-bottom: 30px;
     }
 
     .row-container {
       display: flex;
-      align-items: flex-start; /* Alineamos al inicio (izquierda) */
+      flex-direction: row;
+      align-items: flex-start;
     }
 
     .iframe-800 {
-      margin-left: 30px; /* Añade un margen izquierdo de 30px al iframe de 800x600 */
+      margin-left: 30px;
     }
 
-    .iframe-970x90 {
-      margin-top: 0; /* Elimina el margen superior del iframe de 970x90 */
-      margin-bottom: 30px; /* Añade un margen inferior de 30px al iframe de 970x90 */
+    .iframe-970x90, .iframe-970x250 {
+      margin-top: 0;
+      margin-bottom: 30px;
     }
 
-    h1 {
-      text-align: left; /* Alinea el título a la izquierda */
-      margin-left: 20px; /* Alinea el título con la primera animación */
+    h1, p {
+      text-align: left;
+      margin-left: 20px;
+      width: calc(100% - 40px);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        align-items: center;
+      }
+
+      iframe {
+        width: 100%;
+        max-width: 970px;
+      }
+
+      .iframe-800 {
+        margin-left: 0;
+      }
+
+      h1, p {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Pensá en frío</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
   <div class="container">
     <div class="row-container">
       <iframe src="invierno_800x600.html" width="800px" height="600px"></iframe>
       <iframe src="300x600_invierno.html" class="iframe-800" width="300px" height="600px"></iframe>
     </div>
-    <iframe src="invierno_.html" width="970px" height="250px"></iframe>
-    <iframe src="invierno_970x90.html" class="iframe-970x90" width="970px" height="90px"></iframe> <!-- Nueva animación -->
+    <iframe src="invierno_.html" class="iframe-970x250" width="970px" height="250px"></iframe>
+    <iframe src="invierno_970x90.html" class="iframe-970x90" width="970px" height="90px"></iframe>
   </div>
 </body>
 </html>
