@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campaña html5 invierno Aerolineas</title>
+  <style>
+    /* Estilos para posicionar las animaciones y darles un aspecto visual atractivo */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column; /* Apilamos las animaciones verticalmente */
+      align-items: flex-start; /* Alineamos al inicio (izquierda) */
+      margin: 20px;
+    }
+
+    iframe {
+      border: none; /* Elimina el borde por defecto del iframe */
+      margin-bottom: 30px; /* Añade un margen inferior de 30px a cada iframe */
+    }
+
+    .row-container {
+      display: flex;
+      align-items: flex-start; /* Alineamos al inicio (izquierda) */
+    }
+
+    .iframe-800 {
+      margin-left: 30px; /* Añade un margen izquierdo de 30px al iframe de 800x600 */
+    }
+
+    .iframe-970x90 {
+      margin-top: 0; /* Elimina el margen superior del iframe de 970x90 */
+      margin-bottom: 30px; /* Añade un margen inferior de 30px al iframe de 970x90 */
+    }
+
+    h1 {
+      text-align: left; /* Alinea el título a la izquierda */
+      margin-left: 20px; /* Alinea el título con la primera animación */
+    }
+  </style>
+</head>
+<body>
+  <h1>Pensá en frío</h1>
+  <div class="container">
+    <div class="row-container">
+      <iframe src="invierno_800x600.html" width="800px" height="600px"></iframe>
+      <iframe src="300x600_invierno.html" class="iframe-800" width="300px" height="600px"></iframe>
+    </div>
+    <iframe src="invierno_.html" width="970px" height="250px"></iframe>
+    <iframe src="invierno_970x90.html" class="iframe-970x90" width="970px" height="90px"></iframe> <!-- Nueva animación -->
+  </div>
+</body>
+</html>
