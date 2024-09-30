@@ -447,27 +447,27 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(13).to({startPosition:36},0).to({x:856,startPosition:49},28,cjs.Ease.quartInOut).wait(314));
 
-	// gradiente
-	this.instance_7 = new lib.Gradient2();
-	this.instance_7.setTransform(-1,0);
+	// avion
+	this.instance_7 = new lib.avion_1();
+	this.instance_7.setTransform(567,36,1,1,0,0,0,138,42);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(355));
 
-	// avion
-	this.instance_8 = new lib.avion_1();
-	this.instance_8.setTransform(567,36,1,1,0,0,0,138,42);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(355));
-
 	// nieve_copy
-	this.instance_9 = new lib.Tween5("synched",0);
-	this.instance_9.setTransform(364,19);
+	this.instance_8 = new lib.Tween5("synched",0);
+	this.instance_8.setTransform(364,19);
 
-	this.instance_10 = new lib.Tween6("synched",0);
-	this.instance_10.setTransform(614,51);
+	this.instance_9 = new lib.Tween6("synched",0);
+	this.instance_9.setTransform(614,51);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_9}]}).to({state:[{t:this.instance_10}]},354).wait(1));
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).to({_off:true,x:614,y:51},354).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_8}]}).to({state:[{t:this.instance_9}]},354).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).to({_off:true,x:614,y:51},354).wait(1));
+
+	// gradiente
+	this.instance_10 = new lib.Gradient2();
+	this.instance_10.setTransform(-1,0);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(355));
 
 	// nieve
 	this.instance_11 = new lib.Tween5("synched",0);
