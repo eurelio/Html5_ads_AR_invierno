@@ -50,57 +50,32 @@
     }
 
     @media (max-width: 768px) {
-      .container {
-        align-items: center;
+      body {
+        transform: scale(0.75); /* Escalar la estructura completa */
+        transform-origin: top left; /* Asegura que la escala sea desde la esquina superior izquierda */
       }
 
-      .row-container {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding-right: 20px;
+      .container {
+        margin: 10px;
       }
 
       iframe {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .iframe-800 {
-        margin-left: 10px;
-      }
-
-      h1, p {
-        margin-left: 0;
-        text-align: center;
-        width: 100%;
+        margin-bottom: 20px;
       }
     }
 
     @media (max-width: 480px) {
-      .row-container {
-        transform: scale(0.5);
+      body {
+        transform: scale(0.5); /* Escalar aún más en dispositivos pequeños */
         transform-origin: top left;
       }
 
       .container {
-        transform: scale(0.5);
-        transform-origin: top left;
+        margin: 10px;
       }
 
       iframe {
-        width: 100%;
-        max-width: 100%;
-      }
-
-      .iframe-800 {
-        margin-left: 10px;
-      }
-
-      h1, p {
-        margin-left: 0;
-        text-align: center;
-        width: 100%;
+        margin-bottom: 15px;
       }
     }
   </style>
