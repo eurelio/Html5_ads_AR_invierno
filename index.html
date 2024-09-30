@@ -19,7 +19,7 @@
     .container {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: flex-start; 
       margin: 20px;
     }
 
@@ -44,30 +44,36 @@
     }
 
     h1, p {
-      text-align: left;
+      text-align: left; 
       margin-left: 20px;
       width: calc(100% - 40px);
     }
 
+    
     @media (max-width: 768px) {
-      body {
-        transform: scale(0.75); /* Escalar la estructura completa */
-        transform-origin: top left; /* Asegura que la escala sea desde la esquina superior izquierda */
-      }
-
-      .container {
-        margin: 10px;
+      .row-container {
+        flex-direction: row; 
+        align-items: flex-start;
+        justify-content: flex-start;
       }
 
       iframe {
-        margin-bottom: 20px;
+        width: auto; 
+        height: auto;
+      }
+
+      .iframe-800 {
+        margin-left: 10px;
       }
     }
 
+    
     @media (max-width: 480px) {
-      body {
-        transform: scale(0.5); /* Escalar aún más en dispositivos pequeños */
-        transform-origin: top left;
+      .row-container {
+        flex-direction: row; 
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow-x: auto; 
       }
 
       .container {
@@ -75,7 +81,18 @@
       }
 
       iframe {
-        margin-bottom: 15px;
+        width: auto; 
+        height: auto;
+      }
+
+      .iframe-800 {
+        margin-left: 10px;
+      }
+
+      h1, p {
+        margin-left: 0;
+        text-align: left;
+        width: 100%;
       }
     }
   </style>
