@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"invierno_800x600_atlas_1", frames: [[1910,489,34,48],[802,616,462,140],[1604,489,228,29],[1052,361,109,16],[1191,0,800,423],[802,374,248,40],[1910,539,46,10],[1604,578,305,16],[0,0,1189,293],[1834,489,74,87],[1163,361,7,27],[1183,295,3,39],[802,295,225,77],[1604,425,409,62],[802,425,800,189],[0,295,800,361],[1029,295,152,64]]}
+		{name:"invierno_800x600_atlas_1", frames: [[1993,0,34,48],[1604,425,357,140],[802,616,228,29],[1052,361,109,16],[1191,0,800,423],[802,374,248,40],[1993,50,46,10],[1032,616,305,16],[0,0,1189,293],[1963,425,74,87],[2029,0,7,27],[2038,0,3,39],[802,295,225,77],[1604,567,409,62],[802,425,800,189],[0,295,800,361],[1029,295,152,64]]}
 ];
 
 
@@ -386,7 +386,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.avion_1, new cjs.Rectangle(0,0,462,140), null);
+}).prototype = getMCSymbolPrototype(lib.avion_1, new cjs.Rectangle(0,0,357,140), null);
 
 
 (lib.logo_AR = function(mode,startPosition,loop,reversed) {
@@ -695,7 +695,7 @@ if (reversed == null) { reversed = false; }
 
 	// avion
 	this.instance_10 = new lib.avion_1();
-	this.instance_10.setTransform(543,198,1,1,0,0,0,231,70);
+	this.instance_10.setTransform(674,198,1,1,0,0,0,231,70);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(360));
 
