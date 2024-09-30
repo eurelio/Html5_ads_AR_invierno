@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"invierno_970x90_atlas_1", frames: [[972,158,35,49],[316,385,276,84],[796,250,228,90],[0,158,970,90],[972,209,48,10],[0,0,1006,156],[764,443,75,88],[0,250,794,90],[1008,0,7,29],[594,443,168,58],[0,342,970,41],[0,385,314,80],[594,385,369,56]]}
+		{name:"invierno_970x90_atlas_1", frames: [[972,158,35,49],[0,385,326,85],[796,250,228,90],[0,158,970,90],[972,209,48,10],[0,0,1006,156],[814,443,75,88],[0,250,794,90],[1015,342,7,29],[644,443,168,58],[0,342,970,41],[328,385,314,80],[644,385,369,56]]}
 ];
 
 
@@ -289,7 +289,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.avion_1, new cjs.Rectangle(0,0,276,84), null);
+}).prototype = getMCSymbolPrototype(lib.avion_1, new cjs.Rectangle(0,0,326,85), null);
 
 
 (lib.logo_1 = function(mode,startPosition,loop,reversed) {
@@ -453,21 +453,21 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(355));
 
-	// nieve_copy
-	this.instance_8 = new lib.Tween5("synched",0);
-	this.instance_8.setTransform(364,19);
-
-	this.instance_9 = new lib.Tween6("synched",0);
-	this.instance_9.setTransform(614,51);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_8}]}).to({state:[{t:this.instance_9}]},354).wait(1));
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).to({_off:true,x:614,y:51},354).wait(1));
-
 	// gradiente
-	this.instance_10 = new lib.Gradient2();
-	this.instance_10.setTransform(-1,0);
+	this.instance_8 = new lib.Gradient2();
+	this.instance_8.setTransform(-1,0);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(355));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(355));
+
+	// nieve_copy
+	this.instance_9 = new lib.Tween5("synched",0);
+	this.instance_9.setTransform(364,19);
+
+	this.instance_10 = new lib.Tween6("synched",0);
+	this.instance_10.setTransform(614,51);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_9}]}).to({state:[{t:this.instance_10}]},354).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).to({_off:true,x:614,y:51},354).wait(1));
 
 	// nieve
 	this.instance_11 = new lib.Tween5("synched",0);
