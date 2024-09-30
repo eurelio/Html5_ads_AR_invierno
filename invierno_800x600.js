@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"invierno_800x600_atlas_1", frames: [[1993,0,34,48],[1604,425,357,140],[802,616,228,29],[1052,361,109,16],[1191,0,800,423],[802,374,248,40],[1993,50,46,10],[1032,616,305,16],[0,0,1189,293],[1963,425,74,87],[2029,0,7,27],[2038,0,3,39],[802,295,225,77],[1604,567,409,62],[802,425,800,189],[0,295,800,361],[1029,295,152,64]]}
+		{name:"invierno_800x600_atlas_1", frames: [[1963,514,34,48],[1604,425,357,140],[1604,631,228,29],[1834,631,109,16],[1191,0,800,423],[802,374,248,40],[1029,361,46,10],[1604,662,305,16],[0,0,1189,293],[1963,425,74,87],[1999,514,7,27],[1183,295,3,39],[802,295,225,77],[1604,567,409,62],[802,425,800,189],[802,616,800,189],[0,295,800,361],[1029,295,152,64]]}
 ];
 
 
@@ -132,16 +132,23 @@ lib.ssMetadata = [
 
 
 
-(lib.pista = function() {
+(lib.pipa_1 = function() {
 	this.initialize(ss["invierno_800x600_atlas_1"]);
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.sininterés = function() {
+(lib.pista = function() {
 	this.initialize(ss["invierno_800x600_atlas_1"]);
 	this.gotoAndStop(16);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.sininterés = function() {
+	this.initialize(ss["invierno_800x600_atlas_1"]);
+	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -243,7 +250,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.pipa();
+	this.instance = new lib.pipa_1();
 	this.instance.setTransform(-400,-94.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
