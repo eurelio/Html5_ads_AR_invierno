@@ -49,26 +49,42 @@
       width: calc(100% - 40px);
     }
 
-    /* Mobile adjustments */
+    /* Escala proporcional en mobile */
     @media (max-width: 768px) {
       .row-container {
-        flex-direction: column; /* Apilar los iframes en mobile */
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
       }
 
       iframe {
-        width: 100%; /* Que ocupen todo el ancho disponible en mobile */
-        height: auto; /* Ajustar la altura para mantener el aspecto */
+        transform: scale(0.5); /* Escala los iframes al 50% de su tamaño original */
+        transform-origin: top left; /* Mantén el origen de la escala en la esquina superior izquierda */
+        width: 800px; /* Mantén el ancho original de los iframes */
+        height: auto; /* Ajusta la altura automáticamente */
       }
 
-      .iframe-800, .iframe-970x90, .iframe-970x250 {
-        margin-left: 0; /* Eliminar márgenes en mobile */
+      .iframe-800 {
+        margin-left: 10px;
       }
 
       h1, p, hr {
+        margin-left: 0;
         text-align: left;
-        margin-left: 20px;
-        width: calc(100% - 40px);
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      iframe {
+        transform: scale(0.4); /* Escala aún más para pantallas pequeñas */
+        transform-origin: top left;
+        width: 800px; /* Mantén el tamaño original */
+        height: auto;
+      }
+
+      .row-container {
+        flex-direction: column; /* Apila las creatividades en pantallas pequeñas */
       }
     }
   </style>
