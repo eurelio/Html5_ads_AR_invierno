@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campaña HTML5 Invierno Aerolíneas</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Campaña HTML5 de invierno para Aerolíneas.">
   <meta name="keywords" content="HTML5, campaña, invierno, Aerolíneas, animación">
   <style>
@@ -49,35 +50,19 @@
       width: calc(100% - 40px);
     }
 
-    
+    /* Mobile adjustments */
     @media (max-width: 768px) {
+      body {
+        overflow-x: auto; /* Permitir scroll horizontal en móvil */
+      }
+
       .row-container {
-        flex-direction: row; 
-        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
         justify-content: flex-start;
-      }
-
-      iframe {
-        width: auto; 
-        height: auto;
-      }
-
-      .iframe-800 {
-        margin-left: 10px;
-      }
-    }
-
-    
-    @media (max-width: 480px) {
-      .row-container {
-        flex-direction: row; 
         align-items: flex-start;
-        justify-content: flex-start;
-        overflow-x: auto; 
-      }
-
-      .container {
-        margin: 10px;
+        overflow-x: auto; /* Permitir scroll horizontal en la fila */
+        white-space: nowrap; /* Mantener los iframes en fila */
       }
 
       iframe {
@@ -89,10 +74,10 @@
         margin-left: 10px;
       }
 
-      h1, p {
-        margin-left: 0;
+      h1, p, hr {
         text-align: left;
-        width: 100%;
+        margin-left: 20px;
+        width: calc(100% - 40px);
       }
     }
   </style>
@@ -101,7 +86,9 @@
   <main>
     <h1>Pensá en frío</h1>
     <hr/>
-    <p>Te comparto algunos adaptaciones para la Campaña digital de Aerolíneas Argentinas / I'm sharing with you some assets for the digital campaign for Aerolíneas Argentinas<br> <a href="https://www.linkedin.com/in/leandro-luna-25660b143/" target="_blank" style="color: antiquewhite;"> Contáctame</a> </p>
+    <p>Te comparto algunas adaptaciones para la Campaña digital de Aerolíneas Argentinas / I'm sharing with you some assets for the digital campaign for Aerolíneas Argentinas<br> 
+      <a href="https://www.linkedin.com/in/leandro-luna-25660b143/" target="_blank" style="color: antiquewhite;"> Contáctame</a>
+    </p>
     
     <section class="container">
       <div class="row-container">
