@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campaña HTML5 Invierno Aerolíneas</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <meta name="description" content="Campaña HTML5 de invierno para Aerolíneas.">
@@ -26,8 +26,6 @@
     iframe {
       border: none;
       margin-bottom: 30px;
-      width: 100%; /* Asegura que los iframes ocupen el 100% del ancho disponible */
-      height: auto; /* Mantiene la proporción */
     }
 
     .row-container {
@@ -35,7 +33,15 @@
       flex-direction: row;
       align-items: flex-start;
       justify-content: space-between;
-      width: 100%; /* Asegura que la fila ocupe el 100% del ancho */
+    }
+
+    .iframe-800 {
+      margin-left: 30px;
+    }
+
+    .iframe-970x90, .iframe-970x250 {
+      margin-top: 0;
+      margin-bottom: 30px;
     }
 
     h1, p, hr {
@@ -44,10 +50,37 @@
       width: calc(100% - 40px);
     }
 
-    /* Ajustes para pantallas más pequeñas */
-    @media (max-width: 768px) {
+    /* Escalar iframes para pantallas pequeñas */
+    @media (max-width: 1024px) {
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+
       .row-container {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        flex-direction: column;
+      }
+    }
+    
+    /* Ajuste específico para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+      iframe {
+        width: 100%;  /* Se ajusta al ancho del móvil */
+        height: auto; /* Mantiene proporción */
+      }
+
+      .container {
+        margin: 10px;
+      }
+
+      .row-container {
+        flex-direction: column;
+      }
+
+      h1, p {
+        margin-left: 0;
+        text-align: left;
+        width: 100%;
       }
     }
   </style>
@@ -62,11 +95,11 @@
     
     <section class="container">
       <div class="row-container">
-        <iframe src="invierno_800x600.html" title="Invierno 800x600" alt="Animación de invierno 800x600"></iframe>
-        <iframe src="300x600_invierno.html" title="Invierno 300x600" alt="Animación de invierno 300x600"></iframe>
+        <iframe src="invierno_800x600.html" width="800px" height="600px" title="Invierno 800x600" alt="Animación de invierno 800x600"></iframe>
+        <iframe src="300x600_invierno.html" class="iframe-800" width="300px" height="600px" title="Invierno 300x600" alt="Animación de invierno 300x600"></iframe>
       </div>
-      <iframe src="invierno_.html" title="Invierno 970x250" alt="Animación de invierno 970x250"></iframe>
-      <iframe src="invierno_970x90.html" title="Invierno 970x90" alt="Animación de invierno 970x90"></iframe>
+      <iframe src="invierno_.html" class="iframe-970x250" width="970px" height="250px" title="Invierno 970x250" alt="Animación de invierno 970x250"></iframe>
+      <iframe src="invierno_970x90.html" class="iframe-970x90" width="970px" height="90px" title="Invierno 970x90" alt="Animación de invierno 970x90"></iframe>
     </section>
   </main>
 </body>
